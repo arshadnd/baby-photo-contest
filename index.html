@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <section class="navbar">
+    <div class="btn">
+      <a id="btn1" href="index.html">Participate</a>
+      <a href="login.html">Login</a>
+    </div>
+
+    <div>
+      <ul class="link">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Result</a></li>
+        <li><a href="#">Gift Hamper</a></li>
+        <li><a href="#">Prized Details</a></li>
+        <li><a href="#">Announcement</a></li>
+        <li><a href="#">Entries</a></li>
+        <li><a href="#">Rules</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="hero">
+
+    <div class="form-participant">
+      <div class="box">
+        <div class="head">
+          <i class="fa-solid fa-house"></i>
+          <h1>MyCuteBaby Photo Contest</h1>
+        </div>
+      </div>
+
+      <div class="under-head">
+        <span class="under">2023</span>
+      </div>
+
+      <div class="form-deatails">
+        <form method="post" action="/" enctype="multipart/form-data">
+          <div class="input-grp">
+            <input type="text" name="name" placeholder="Enter Name of Baby" id="contact-name" onkeyup="validateName()" />
+            <span id="name-error"></span>
+          </div>
+
+          <div class="input-grp">
+            <input type="number" name="mno" placeholder="Enter Your Mobile Number" id="contact-phone" onkeyup="validatePhone()" />
+            <span id="phone-error"></span>
+          </div>
+
+          <div class="input-grp">
+            <input type="email" name="email" placeholder="Enter Your Email ID" id="contact-email" onkeyup="validateEmail()" />
+            <span id="email-error"></span>
+          </div>
+
+          <!-- <input type="submit" value="Submit"> -->
+
+          <label for="input-file"><img src="508-icon.png" alt="" />Upload Photo</label>
+        <!-- <button></button> -->
+
+        <div class="card">
+          <input type="file" name="image" accept="image/*" id="input-file" hidden />
+
+          <div id="img-view">
+            <p>
+              Select an image by clicking the 'Set a Photo' button above to
+              set the profile picture for your baby's entry.
+            </p>
+          </div>
+
+          <!-- <img src="profile.jpg" alt=""> -->
+        </div>
+
+        <button id="btn-submit">
+          <img src="telegram 2.png" alt="telegram" />Submit Entry
+        </button>
+
+        </form>
+
+        
+
+        <div class="box-p">
+          <p>
+            By participating in contest, you are agreeing
+            <span>Privacy Policy</span> & <span>Terms & Conditions </span>and
+            <span>Contest Rules</span> .
+          </p>
+          <p>
+            There is no fee for participation & voting, if anyone demand for
+            any kind of fee then don't pay fee.
+          </p>
+
+          <div class="Google">
+            👉 Use Google Chrome Browser to register for best experaince
+          </div>
+
+          <div class="email">
+            <p>
+              👉 If you are unable to register then don't choose Picture and
+              submit then send baby photo & mobile number on Facebook page or
+              Email query@mycutebaby.in
+            </p>
+          </div>
+          <div class="Google">
+            👉 Registration For MyCute Baby August Contest (August 2023) Are
+            Open Till 31/8/2023.
+          </div>
+          <div class="Google">
+            👉 If you are already registered please Click here To Login and
+            use your mobile Number
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="form-login">
+      <h1>login</h1>
+      <div class="box">
+        <div class="head">
+          <i class="fa-solid fa-house"></i>
+          <h1>MyCuteBaby Photo Contest</h1>
+        </div>
+      </div>
+
+      <div class="under-head">
+        <span class="under">2023</span>
+      </div>
+
+      <div class="form-deatails">
+        <form>
+          <div class="input-grp">
+            <input type="number" placeholder="Enter Your Mobile Number" id="contact-phone" onkeyup="validatePhone()" />
+            <span id="phone-error"></span>
+          </div>
+          <p>Use the same mobile number which was used in participation</p>
+
+          <button id="btn-submit">
+          SUBMIT
+          </button>
+  
+        </form>
+
+    
+
+    
+        <div class="box-p">
+          <p>
+            By participating in contest, you are agreeing
+            <span>Privacy Policy</span> & <span>Terms & Conditions </span>and
+            <span>Contest Rules</span> .
+          </p>
+          <p>
+            There is no fee for participation & voting, if anyone demand for
+            any kind of fee then don't pay fee.
+          </p>
+
+          <div class="Google">
+            👉 Use Google Chrome Browser to register for best experaince
+          </div>
+
+          <div class="email">
+            <p>
+              👉 If you are unable to register then don't choose Picture and
+              submit then send baby photo & mobile number on Facebook page or
+              Email query@mycutebaby.in
+            </p>
+          </div>
+          <div class="Google">
+            👉 Registration For MyCute Baby August Contest (August 2023) Are
+            Open Till 31/8/2023.
+          </div>
+          <div class="Google">
+            👉 If you are already registered please Click here To Login and
+            use your mobile Number
+          </div>
+        </div>
+
+        
+      </div>
+    </div> -->
+
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

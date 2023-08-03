@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <title>Participant Details</title>
+    <!-- Add any CSS or styling here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+    }
+
+    /* header{
+    width: 1300px;
+    height: 55px;
+    background-color: #f8f8f8;
+} */
+    body {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #d2dbdd;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 55px;
+        background-color: #f8f8f8;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        margin-left: 40px;
+
+        font-size: 18px;
+
+        border-radius: 10px;
+    }
+
+    .navbar .btn a {
+        width: 110px;
+        height: 40px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 50px; */
+        margin-left: -10px;
+        background-color: white;
+        color: black;
+
+        font-size: 18px;
+
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+            7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    #btn1 {
+        background-color: #663dff;
+        width: 110px;
+        height: 40px;
+        font-size: 18px;
+        margin: 10px 20px;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #btn2 {
+        background-color: #fff4ff;
+        color: black;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        width: 110px;
+        height: 40px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        margin-right: 60px;
+    }
+
+    .link li {
+        list-style: none;
+        padding-left: 30px;
+    }
+
+    .link li a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #777777;
+    }
+
+    /* login hero section styling */
+
+
+
+    .login-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        color: white;
+        color: black;
+        width: 599px;
+        height: 100vh;
+        position: absolute;
+        margin: auto;
+        margin-top: 35%;
+        margin-bottom: 50px;
+        top: -15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+        background: linear-gradient(45deg, rgb(35, 51, 79) 5%, rgb(34, 43, 55) 99%);
+        text-align: center;
+        /* height: auto !important; */
+        min-height: 0px !important;
+
+    }
+
+    .hero-box {
+        background: linear-gradient(to right, #ffffff 0%, #d262ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-box i {
+        /* background-color: white; */
+        width: 38px;
+        height: 23px;
+        font-size: 19px;
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .under-head {
+        width: 90%;
+        max-width: 290px;
+        height: 15px;
+        border-bottom: 2px solid #da00ff;
+        text-align: center;
+        margin: auto;
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translate(-45%, -50%);
+    }
+
+    .under {
+        font-size: 18px;
+        background-color: #fcfcfc;
+        padding: 0px 10px;
+        color: #d200e5;
+        font-weight: bold;
+    }
+
+    h1,
+    .h1 {
+        font-size: 36px;
+    }
+
+    h1 {
+        font-weight: 200;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+
+    h1 {
+        margin: .67em 0;
+        font-size: 2em;
+        color: white;
+    }
+
+    p {
+        margin: 0 0 10px;
+        font-size: 14px;
+    }
+    .box-color{
+        gap: 10px;
+        width: 599px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box-color .box{
+        box-shadow: inset 0 4px 30px rgb(255 255 255 / 15%);
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 266px;
+        max-width: 100%;
+        height: 70px;
+        color: white;
+        font-size: 24px;
+        background: radial-gradient(circle, rgb(101 37 222) 0%, #233046 50%, rgb(7 40 58) 100%);
+        transition: 0.3s;
+        margin-bottom: 20px;
+    }
+    .box-color .box:hover{
+        background: rgb(75, 75, 165);
+    }
+    .box-color .box1 h3 p{
+        color: white;
+    }
+   
+
+    .para p{
+        text-align: start;
+        font-size: 20px;
+        margin-top: 25px;
+}
+    
+
+ 
+</style>
+
+<body>
+ 
+    <section class="navbar">
+        <div class="btn">
+            <a id="btn1" href="index.html">Participate</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div>
+            <ul class="link">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Result</a></li>
+                <li><a href="#">Gift Hamper</a></li>
+                <li><a href="#">Prized Details</a></li>
+                <li><a href="#">Announcement</a></li>
+                <li><a href="#">Entries</a></li>
+                <li><a href="#">Rules</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="login-hero">
+
+
+        <div class="hero-box">
+
+            <div class="box1">
+                <div class="head">
+                    <i class="fa-solid fa-house"></i>
+                    <h1>MyCuteBaby Photo Contest</h1>
+                </div>
+            </div>
+
+            <!-- 
+            <div class="under-head1">
+                <span class="under">2023</span>
+            </div> -->
+
+        </div>
+
+        <h1>Saf </h1>
+
+        <p>August,2023</p>
+
+        <p>
+            <span class="ranksinfoshow">Current Rank : #293</span>
+        </p>
+
+        <div class="box-color">
+            <div class="box">
+                <div class="col-md-4 col-xs-4 follow curve line_2"></div>
+                <h3 class="vote-count vote_counter" id="vote-count">4 <br> <p>Mycutebaby Votes</p></h3>
+            </div>
+
+            <div class="box">
+                <div class="col-md-4 col-xs-4 follow curve line_2"></div>
+                <h3 class="vote-count vote_counter" id="vote-count">0 <br> <p>Fb Likes &amp; Shares</p> </h3>
+            </div>
+
+            <div class="box">
+                <div class="col-md-4 col-xs-4 follow curve line_2"></div>
+                <h3 class="vote-count vote_counter" id="vote-count">4 <br> <p>Final Votes</p></h3>
+            </div>
+
+
+        </div>
+
+
+
+   <h1>Participant Details</h1>
+
+   <div class="para">
+    <p>Name: <%= participant.name %></p>
+    <p>Mobile Number: <%= participant.mno %></p>
+    <p>Email: <%= participant.email %></p>
+    <p>Image URL: <%= participant.image_url %></p>
+
+   </div>
+ 
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+</body>
+
+</html>
